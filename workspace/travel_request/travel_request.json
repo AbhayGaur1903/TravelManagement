@@ -1,0 +1,69 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"Xv7YJ4k79t\",\"type\":\"header\",\"data\":{\"text\":\"<i><span class=\\\"h3\\\">Travel Request </span><span class=\\\"h4\\\"></span></i>\",\"col\":12}},{\"id\":\"60C9vjfWMR\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create NEW\",\"col\":3}},{\"id\":\"qFSJq44Rnd\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Pending Approvals\",\"col\":9}},{\"id\":\"N9z_mYeZEa\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Approved Travel Requests\",\"col\":6}},{\"id\":\"YaiEr3U8t1\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"All Travel Request\",\"col\":6}},{\"id\":\"JierL2qlN7\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Travel Request Extension Approval\",\"col\":6}},{\"id\":\"2ojwoT0vFA\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Travel Request Return Booking Approval\",\"col\":6}}]",
+ "creation": "2023-06-09 15:59:01.633907",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "review",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Travel Request",
+ "links": [],
+ "modified": "2023-07-27 19:09:47.428754",
+ "modified_by": "Administrator",
+ "module": "Travel Management App",
+ "name": "Travel Request",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Travel Request EXP",
+   "label": "Travel Request Extension Approval",
+   "quick_list_filter": "{\"workflow_state\":[\"=\",\"Sent For Trip Extension Approval\"]}"
+  },
+  {
+   "document_type": "Travel Request EXP",
+   "label": "Approved Travel Requests",
+   "quick_list_filter": "{\"workflow_state\":[\"=\",\"Approved\"]}"
+  },
+  {
+   "document_type": "Travel Request EXP",
+   "label": "Pending Approvals",
+   "quick_list_filter": "{\"workflow_state\":[\"=\",\"Sent for Approval\"]}"
+  },
+  {
+   "document_type": "Travel Request EXP",
+   "label": "All Travel Request"
+  },
+  {
+   "document_type": "Travel Request EXP",
+   "label": "Travel Request Return Booking Approval",
+   "quick_list_filter": "{\"workflow_state\":[\"=\",\"Sent For Return Approval\"]}"
+  }
+ ],
+ "restrict_to_domain": "",
+ "roles": [
+  {
+   "role": "Approving Manager"
+  },
+  {
+   "role": "Employee"
+  }
+ ],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Green",
+   "doc_view": "New",
+   "label": "Create NEW",
+   "link_to": "Travel Request EXP",
+   "type": "DocType"
+  }
+ ],
+ "title": "Travel Request"
+}

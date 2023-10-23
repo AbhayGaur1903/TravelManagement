@@ -1,0 +1,77 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-06-16 18:13:02.915377",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "journey_type",
+  "mode",
+  "food_inclusion",
+  "boarding_time",
+  "booking_amount",
+  "ticket",
+  "send"
+ ],
+ "fields": [
+  {
+   "fieldname": "journey_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Journey Type ",
+   "options": "\nOutwards\nReturn",
+   "reqd": 1
+  },
+  {
+   "fieldname": "booking_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Booking Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ticket",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Ticket"
+  },
+  {
+   "fieldname": "send",
+   "fieldtype": "Button",
+   "label": "Send"
+  },
+  {
+   "fieldname": "mode",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Mode",
+   "options": "Mode EXP",
+   "reqd": 1
+  },
+  {
+   "fieldname": "food_inclusion",
+   "fieldtype": "Select",
+   "label": "Food Inclusion",
+   "options": "\nBreakfast\nLunch\nDinner\nBreakfast, Lunch\nBreakfast, Lunch, Dinner\nLunch, Dinner"
+  },
+  {
+   "fieldname": "boarding_time",
+   "fieldtype": "Data",
+   "label": "Boarding TIme"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-27 12:32:08.379996",
+ "modified_by": "Administrator",
+ "module": "Travel Management App",
+ "name": "Booking Status EXP",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

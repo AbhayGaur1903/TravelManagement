@@ -1,0 +1,382 @@
+{
+ "_liked_by": "[\"Administrator\"]",
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "autoname",
+ "creation": "2023-06-07 17:17:55.764454",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "travel_category",
+  "from_data",
+  "city_other",
+  "city",
+  "if_city_not_in_dropdown_press_this",
+  "column_break_uyfqz",
+  "employee_id",
+  "employees_id_group",
+  "to_date",
+  "grade",
+  "column_break_upwje",
+  "travel_type",
+  "visit_type",
+  "client",
+  "approver",
+  "travel_extension_section",
+  "travel_extension_details",
+  "travel_extension_checker",
+  "add_group_travel_details_section",
+  "group_travel_details",
+  "travel_details_section",
+  "travel_details",
+  "travel_details_return",
+  "section_break_coz2p",
+  "stay_type",
+  "column_break_jdbnl",
+  "write_your_requests",
+  "comments_section",
+  "approver_comments",
+  "booking_status_section",
+  "booking_vouchers",
+  "booking_detals",
+  "hotel_details",
+  "city_type",
+  "amended_from",
+  "transport_booked_by_company",
+  "stay_booked_by_company",
+  "approving_user"
+ ],
+ "fields": [
+  {
+   "depends_on": "eval:doc.travel_category == 'Individual' || doc.travel_category == 'Group' || doc.travel_category == 'Please Select';",
+   "fieldname": "employee_id",
+   "fieldtype": "Link",
+   "label": "Employee ID",
+   "options": "Employee EXP"
+  },
+  {
+   "fieldname": "travel_type",
+   "fieldtype": "Link",
+   "label": "Travel Type",
+   "options": "Travel Type EXP",
+   "reqd": 1
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Link",
+   "label": "Grade",
+   "options": "Grade EXP",
+   "reqd": 1
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Link",
+   "label": "City",
+   "options": "City EXP",
+   "read_only_depends_on": "eval:doc.if_city_not_in_dropdown_press_this === 1;"
+  },
+  {
+   "default": "0",
+   "fieldname": "if_city_not_in_dropdown_press_this",
+   "fieldtype": "Check",
+   "label": "if city not in dropdown press this "
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "label": "Project ",
+   "options": "Client EXP"
+  },
+  {
+   "fieldname": "from_data",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "approver",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Approver ",
+   "options": "Employee EXP"
+  },
+  {
+   "fieldname": "travel_details",
+   "fieldtype": "Table",
+   "label": "Travel Details Outward",
+   "options": "Travel Request Details EXP"
+  },
+  {
+   "fieldname": "write_your_requests",
+   "fieldtype": "Text",
+   "label": "Write your Requests"
+  },
+  {
+   "depends_on": "eval:doc.workflow_state == \"Sent for Approval\"||doc.workflow_state == \"Rejected\";",
+   "fieldname": "approver_comments",
+   "fieldtype": "Small Text",
+   "label": "Approver Comments"
+  },
+  {
+   "fieldname": "column_break_uyfqz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_upwje",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "travel_details_section",
+   "fieldtype": "Section Break",
+   "label": "Travel Details"
+  },
+  {
+   "fieldname": "comments_section",
+   "fieldtype": "Section Break",
+   "label": "Comments"
+  },
+  {
+   "default": "Enter City Name",
+   "depends_on": "eval:doc.if_city_not_in_dropdown_press_this === 1;",
+   "fieldname": "city_other",
+   "fieldtype": "Data",
+   "label": "Other City"
+  },
+  {
+   "fieldname": "visit_type",
+   "fieldtype": "Select",
+   "label": "VIsit Type ",
+   "options": "\nBackOffice\nSales/ Marketing\nTechnical",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.workflow_state == \"Sent To Travel Desk\"|| doc.workflow_state == \"Booked\"||doc.workflow_state == \"Approved\";",
+   "fieldname": "booking_status_section",
+   "fieldtype": "Section Break",
+   "label": "Booking Status"
+  },
+  {
+   "fieldname": "travel_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Travel Category",
+   "options": "\nIndividual\nGroup",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employees_id_group",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Employees ID Group",
+   "options": "Group Travel Link EXP"
+  },
+  {
+   "fieldname": "city_type",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "City Type ",
+   "options": "\nCity A EXP\nCity B EXP"
+  },
+  {
+   "fieldname": "stay_type",
+   "fieldtype": "Select",
+   "label": "Stay Type",
+   "options": "\nHotel\nGuest House\nRelative",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_coz2p",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_jdbnl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Travel Request EXP",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "travel_details_return",
+   "fieldtype": "Table",
+   "label": "Travel Details Return",
+   "options": "Travel Request Details EXP"
+  },
+  {
+   "fieldname": "booking_detals",
+   "fieldtype": "Table",
+   "label": "Booking Details",
+   "options": "Booking Status EXP"
+  },
+  {
+   "fieldname": "travel_extension_section",
+   "fieldtype": "Section Break",
+   "label": "Travel Extension"
+  },
+  {
+   "depends_on": "eval:doc.workflow_state == \"Trip Extension\" || doc.workflow_state == \"Sent To Travel Desk\" || doc.workflow_state == \"Approved\" || doc.workflow_state == \"Sent For Trip Extension Approval\";",
+   "fieldname": "travel_extension_details",
+   "fieldtype": "Table",
+   "label": "Travel Extension Details",
+   "options": "Travel Request Extension",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.travel_category == 'Group';",
+   "fieldname": "group_travel_details",
+   "fieldtype": "Small Text",
+   "label": "Group Travel Details",
+   "mandatory_depends_on": "eval:doc.travel_category == 'Group';"
+  },
+  {
+   "fieldname": "add_group_travel_details_section",
+   "fieldtype": "Section Break",
+   "label": "ADD Group Travel Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "travel_extension_checker",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Travel Extension Checker"
+  },
+  {
+   "default": "0",
+   "fieldname": "transport_booked_by_company",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "transport_booked_by_company"
+  },
+  {
+   "fieldname": "approving_user",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Approving_user",
+   "options": "User"
+  },
+  {
+   "fieldname": "hotel_details",
+   "fieldtype": "Table",
+   "label": "Hotel Details",
+   "options": "Hotel Details EXP"
+  },
+  {
+   "default": "0",
+   "fieldname": "stay_booked_by_company",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "stay_booked_by_company"
+  },
+  {
+   "fieldname": "booking_vouchers",
+   "fieldtype": "Button",
+   "label": "Booking Vouchers"
+  }
+ ],
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-07-27 12:03:47.756233",
+ "modified_by": "Administrator",
+ "module": "Travel Management App",
+ "name": "Travel Request EXP",
+ "naming_rule": "By script",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Approving Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "report": 1,
+   "role": "Access Masters",
+   "select": 1,
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Finance Head",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Travel Desk",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "ASC",
+ "states": []
+}

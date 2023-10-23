@@ -1,0 +1,29 @@
+{
+ "content": null,
+ "creation": "2023-07-28 11:38:29.693075",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2023-07-28 11:38:29.693075",
+ "modified_by": "Administrator",
+ "module": "Travel Management App",
+ "name": "approvers-documentat",
+ "owner": "Administrator",
+ "page_name": "approvers-documentat",
+ "roles": [
+  {
+   "role": "Approving Manager"
+  },
+  {
+   "role": "Finance Head"
+  },
+  {
+   "role": "Travel Desk"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 1,
+ "title": "Manager, FInance and Travel desk Documentation"
+}

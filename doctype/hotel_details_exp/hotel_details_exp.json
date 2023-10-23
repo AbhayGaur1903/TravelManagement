@@ -1,0 +1,120 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-07-04 18:05:06.806844",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "booking_date",
+  "check_in",
+  "check_out",
+  "place",
+  "hotel_name",
+  "number_of_days",
+  "meals",
+  "total_fare",
+  "payment",
+  "comment",
+  "hotel_ticket",
+  "send"
+ ],
+ "fields": [
+  {
+   "fieldname": "booking_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Booking Date",
+   "width": "1"
+  },
+  {
+   "columns": 1,
+   "fieldname": "check_in",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Check In"
+  },
+  {
+   "fieldname": "check_out",
+   "fieldtype": "Datetime",
+   "label": "Check Out",
+   "print_width": "1"
+  },
+  {
+   "columns": 1,
+   "fieldname": "place",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Place"
+  },
+  {
+   "columns": 1,
+   "fieldname": "hotel_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Hotel Name"
+  },
+  {
+   "fieldname": "number_of_days",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Number Of Days"
+  },
+  {
+   "columns": 1,
+   "fieldname": "meals",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Meals",
+   "options": "\nBreakfast\nLunch\nDinner\nBreakfast, Lunch\nBreakfast, Lunch, Dinner\nLunch, Dinner"
+  },
+  {
+   "columns": 1,
+   "fieldname": "total_fare",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Fare"
+  },
+  {
+   "columns": 1,
+   "fieldname": "payment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Payment",
+   "options": "Payment Mode EXP"
+  },
+  {
+   "fieldname": "comment",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "columns": 1,
+   "fieldname": "hotel_ticket",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Hotel Voucher"
+  },
+  {
+   "columns": 1,
+   "fieldname": "send",
+   "fieldtype": "Button",
+   "in_list_view": 1,
+   "label": "Send"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-07-06 20:30:13.590400",
+ "modified_by": "Administrator",
+ "module": "Travel Management App",
+ "name": "Hotel Details EXP",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

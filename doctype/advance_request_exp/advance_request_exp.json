@@ -1,0 +1,311 @@
+{
+ "_liked_by": "[\"Administrator\"]",
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:EXP-AR-{#####}",
+ "creation": "2023-06-08 00:53:49.318343",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "advance_section",
+  "travel_category",
+  "from_date",
+  "employee_id",
+  "client",
+  "travel_booking_status",
+  "column_break_iknze",
+  "travel_request_id",
+  "to_data",
+  "travel_days",
+  "approver",
+  "grade",
+  "advance_request_detail_section",
+  "advance_request_details",
+  "section_break_rxjtm",
+  "advance_requested",
+  "column_break_xhcip",
+  "maximum_advance",
+  "advance_logic",
+  "section_break_eckpx",
+  "advance_issued",
+  "column_break_wr3yf",
+  "advance_issued_details",
+  "section_break_ymf1m",
+  "total_advance_paid",
+  "column_break_leetx",
+  "advances_issued_section",
+  "advance_paid_details_table",
+  "amended_from",
+  "city_type",
+  "stay_type",
+  "travel_extension_checker"
+ ],
+ "fields": [
+  {
+   "fieldname": "advance_section",
+   "fieldtype": "Section Break",
+   "label": "Advance"
+  },
+  {
+   "fieldname": "employee_id",
+   "fieldtype": "Link",
+   "label": "Employee Id",
+   "options": "Employee EXP"
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "label": "Client ",
+   "options": "Client EXP"
+  },
+  {
+   "fieldname": "approver",
+   "fieldtype": "Link",
+   "label": "Approver ",
+   "options": "Employee EXP"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_data",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "To date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "travel_request_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Travel Request ID",
+   "options": "Travel Request EXP",
+   "reqd": 1
+  },
+  {
+   "fieldname": "travel_days",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Travel Days "
+  },
+  {
+   "fieldname": "maximum_advance",
+   "fieldtype": "Currency",
+   "label": "Maximum Advance ",
+   "options": "INR"
+  },
+  {
+   "fieldname": "advance_issued",
+   "fieldtype": "Currency",
+   "label": "Advance Issued",
+   "options": "INR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "advance_requested",
+   "fieldtype": "Currency",
+   "label": "Advance Requested",
+   "options": "INR"
+  },
+  {
+   "fieldname": "advance_request_details",
+   "fieldtype": "Table",
+   "label": "Advance Request Details",
+   "options": "Advance Request Details EXP"
+  },
+  {
+   "fieldname": "advance_request_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Advance Request Detail"
+  },
+  {
+   "fieldname": "section_break_rxjtm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_xhcip",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_iknze",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "travel_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Travel Category",
+   "options": "\nIndividual\nGroup",
+   "reqd": 1
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Link",
+   "label": "Grade",
+   "options": "Grade EXP"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Advance Request EXP",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "city_type",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "City Type",
+   "options": "\nCity A EXP\nCity B EXP"
+  },
+  {
+   "fieldname": "stay_type",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Stay_type",
+   "options": "\nHotel\nGuest House\nRelative"
+  },
+  {
+   "fieldname": "section_break_eckpx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_wr3yf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "advance_issued_details",
+   "fieldtype": "Table",
+   "label": "Advance Issue Details",
+   "options": "Avance Issued Details EXP"
+  },
+  {
+   "fieldname": "travel_booking_status",
+   "fieldtype": "Data",
+   "label": "Travel Booking Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_ymf1m",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_advance_paid",
+   "fieldtype": "Data",
+   "label": "Total Advance Paid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_leetx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "advance_paid_details_table",
+   "fieldtype": "HTML",
+   "label": "Advance Paid Details Table",
+   "read_only": 1
+  },
+  {
+   "fieldname": "advances_issued_section",
+   "fieldtype": "Section Break",
+   "label": "Advances Issued For this Travel"
+  },
+  {
+   "fieldname": "advance_logic",
+   "fieldtype": "Button",
+   "label": "Advance Logic"
+  },
+  {
+   "default": "0",
+   "fieldname": "travel_extension_checker",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "travel_extension_checker"
+  }
+ ],
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-22 18:11:36.123865",
+ "modified_by": "Administrator",
+ "module": "Travel Management App",
+ "name": "Advance Request EXP",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "report": 1,
+   "role": "Access Masters",
+   "select": 1,
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Approving Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Finance Head",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "ASC",
+ "states": [],
+ "track_changes": 1,
+ "track_views": 1
+}

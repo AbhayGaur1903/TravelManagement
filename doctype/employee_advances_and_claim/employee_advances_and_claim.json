@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-15 17:00:20.169750",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_id_section",
+  "employee_id",
+  "advance_section",
+  "total_adv_req",
+  "column_break_i2upg",
+  "total_adv_iss",
+  "expense_claim_section",
+  "total_exc_sub",
+  "total_exc_apr",
+  "column_break_jwxy3",
+  "total_exc_pay"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_id",
+   "fieldtype": "Link",
+   "options": "Employee EXP"
+  },
+  {
+   "fieldname": "advance_section",
+   "fieldtype": "Section Break",
+   "label": "Advance"
+  },
+  {
+   "fieldname": "total_adv_req",
+   "fieldtype": "Data",
+   "label": "Total Advance Requested"
+  },
+  {
+   "fieldname": "column_break_i2upg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_adv_iss",
+   "fieldtype": "Data",
+   "label": "Total Advance Issued"
+  },
+  {
+   "fieldname": "expense_claim_section",
+   "fieldtype": "Section Break",
+   "label": "Expense Claim"
+  },
+  {
+   "fieldname": "total_exc_sub",
+   "fieldtype": "Data",
+   "label": "Total ExpenseClaim Submitted"
+  },
+  {
+   "fieldname": "total_exc_apr",
+   "fieldtype": "Data",
+   "label": "Total ExpenseClaim Approved"
+  },
+  {
+   "fieldname": "column_break_jwxy3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_exc_pay",
+   "fieldtype": "Data",
+   "label": "Total ExpenseClaim Paid"
+  },
+  {
+   "fieldname": "employee_id_section",
+   "fieldtype": "Section Break",
+   "label": "Employee ID"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-15 17:01:13.103289",
+ "modified_by": "Administrator",
+ "module": "Travel Management App",
+ "name": "Employee Advances and Claim",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

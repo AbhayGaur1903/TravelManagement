@@ -1,0 +1,432 @@
+{
+ "_liked_by": "[\"Administrator\"]",
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:EXP-EC-{#####}",
+ "creation": "2023-06-08 12:54:00.001842",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "expense_claim_form_section",
+  "download_form",
+  "section_break_9awwa",
+  "travel_request_id",
+  "from_date",
+  "period_of_stay",
+  "client",
+  "city",
+  "grade",
+  "column_break_ahg3z",
+  "purpose",
+  "to_date",
+  "employee_id",
+  "approver",
+  "particular_details_section",
+  "particulars",
+  "fare_details_section",
+  "transportation_details",
+  "transportation_details_self",
+  "total_fare_amount",
+  "stay_details_section",
+  "stay_details",
+  "stay_details_self",
+  "total_lodging_amount",
+  "mealsrefreshment_details_section",
+  "refreshment_details",
+  "total_meal_amount",
+  "local_conveyance_details_section",
+  "local_details",
+  "total_conveyance_amount",
+  "sundries_details_section",
+  "sundries_detail",
+  "total_sundries_amount",
+  "advance_section",
+  "advance_availed",
+  "view_advance_details",
+  "balances_section",
+  "total_expense",
+  "expense_issued",
+  "column_break_o2kgc",
+  "balance",
+  "query_section",
+  "query",
+  "column_break_mgfgs",
+  "answer_to_query",
+  "travel_extension_checker",
+  "transport_booked_by_company",
+  "amended_from",
+  "stay_booked_by_company"
+ ],
+ "fields": [
+  {
+   "fieldname": "travel_request_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Travel Request ID",
+   "options": "Travel Request EXP",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee_id",
+   "fieldtype": "Link",
+   "label": "Employee ID",
+   "options": "Employee EXP",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "period_of_stay",
+   "fieldtype": "Int",
+   "label": "Period Of Stay",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ahg3z",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Select",
+   "label": "Purpose",
+   "options": "\nBackOffice\nSales/ Marketing\nTechnical",
+   "read_only": 1
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "label": "Client",
+   "options": "Client EXP",
+   "read_only": 1
+  },
+  {
+   "fieldname": "particular_details_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Particular Details"
+  },
+  {
+   "fieldname": "particulars",
+   "fieldtype": "Table",
+   "label": "Particulars",
+   "options": "Expense Claim Particular Details"
+  },
+  {
+   "fieldname": "local_conveyance_details_section",
+   "fieldtype": "Section Break",
+   "label": "Local Conveyance Details"
+  },
+  {
+   "fieldname": "local_details",
+   "fieldtype": "Table",
+   "label": "Local Details",
+   "options": "Particular Details Local EXP"
+  },
+  {
+   "fieldname": "mealsrefreshment_details_section",
+   "fieldtype": "Section Break",
+   "label": "Meals/Refreshment Details"
+  },
+  {
+   "fieldname": "refreshment_details",
+   "fieldtype": "Table",
+   "label": "Refreshment Details",
+   "options": "Particular Details Meals EXP"
+  },
+  {
+   "fieldname": "sundries_details_section",
+   "fieldtype": "Section Break",
+   "label": "Sundries Details"
+  },
+  {
+   "fieldname": "sundries_detail",
+   "fieldtype": "Table",
+   "label": "Sundries Detail",
+   "options": "Particular Details Sundries EXP"
+  },
+  {
+   "fieldname": "balances_section",
+   "fieldtype": "Section Break",
+   "label": "Balances"
+  },
+  {
+   "fieldname": "advance_availed",
+   "fieldtype": "Currency",
+   "label": "Advance Availed",
+   "options": "INR"
+  },
+  {
+   "fieldname": "column_break_o2kgc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "balance",
+   "fieldtype": "Currency",
+   "label": "Balance",
+   "options": "INR"
+  },
+  {
+   "fieldname": "query_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Query"
+  },
+  {
+   "fieldname": "query",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Query ",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "column_break_mgfgs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "answer_to_query",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Answer To Query",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "From Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "To Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "City"
+  },
+  {
+   "fieldname": "fare_details_section",
+   "fieldtype": "Section Break",
+   "label": "Fare Details"
+  },
+  {
+   "fieldname": "stay_details_section",
+   "fieldtype": "Section Break",
+   "label": "Stay Details"
+  },
+  {
+   "fieldname": "transportation_details",
+   "fieldtype": "Table",
+   "label": "Transportation Details",
+   "options": "Particular Details Fare  EXP"
+  },
+  {
+   "fieldname": "stay_details",
+   "fieldtype": "Table",
+   "label": "Stay Details",
+   "options": "Particular Details Stay EXP"
+  },
+  {
+   "fieldname": "total_sundries_amount",
+   "fieldtype": "Currency",
+   "label": "Total Sundries Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_fare_amount",
+   "fieldtype": "Currency",
+   "label": "Total Fare Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_lodging_amount",
+   "fieldtype": "Currency",
+   "label": "Total Lodging Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_meal_amount",
+   "fieldtype": "Currency",
+   "label": "Total Meal Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_conveyance_amount",
+   "fieldtype": "Currency",
+   "label": "Total Conveyance Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approver",
+   "fieldtype": "Link",
+   "label": "Approving Manager",
+   "options": "Employee EXP",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "travel_extension_checker",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Travel Extension Checker",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "transport_booked_by_company",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Transport Booked By Company",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Link",
+   "label": "Grade",
+   "options": "Grade EXP",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_expense",
+   "fieldtype": "Currency",
+   "label": "Total Expense ",
+   "options": "INR"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Expense Claim EXP",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "transportation_details_self",
+   "fieldtype": "Table",
+   "label": "Transportation Details Self",
+   "options": "Particular Details Fare Self EXP"
+  },
+  {
+   "fieldname": "view_advance_details",
+   "fieldtype": "Button",
+   "label": "View Advance Details"
+  },
+  {
+   "depends_on": "eval:doc.workflow_state == \"Sent for Approval\" || doc.workflow_state == \"Approved\";",
+   "fieldname": "download_form",
+   "fieldtype": "Button",
+   "label": "Download Form"
+  },
+  {
+   "fieldname": "section_break_9awwa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "expense_claim_form_section",
+   "fieldtype": "Section Break",
+   "label": "Expense Claim Form "
+  },
+  {
+   "fieldname": "advance_section",
+   "fieldtype": "Section Break",
+   "label": "Advance"
+  },
+  {
+   "fieldname": "expense_issued",
+   "fieldtype": "Currency",
+   "label": "Expense Issued",
+   "options": "INR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "stay_booked_by_company",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Stay Booked By Company"
+  },
+  {
+   "fieldname": "stay_details_self",
+   "fieldtype": "Table",
+   "label": "Stay Details Self",
+   "options": "Particular Details Stay Self EXP"
+  }
+ ],
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-06 20:02:35.741228",
+ "modified_by": "Administrator",
+ "module": "Travel Management App",
+ "name": "Expense Claim EXP",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Employee",
+   "select": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "role": "Access Masters",
+   "select": 1,
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Approving Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Finance Head",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
